@@ -632,7 +632,7 @@ staticSitePVC: ""
 service:
   ## @param service.type Service type
   ##
-  type: LoadBalancer
+  type: ClusterIp
   ## @param service.ports.http Service HTTP port
   ## @param service.ports.https Service HTTPS port
   ##
@@ -672,7 +672,7 @@ service:
   ## @param service.loadBalancerClass service Load Balancer class if service type is `LoadBalancer` (optional, cloud specific)
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-loadbalancer
   ##
-  loadBalancerClass: NodePort
+  loadBalancerClass: Cluster
   ## @param service.extraPorts Extra ports to expose (normally used with the `sidecar` value)
   ##
   extraPorts: []
